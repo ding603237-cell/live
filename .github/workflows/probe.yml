@@ -1,0 +1,10 @@
+name: Cron Probe
+on:
+  schedule:
+    - cron: '20 5 * * *'
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "cron fired at $(date -u)"
