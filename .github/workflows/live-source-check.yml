@@ -2,7 +2,7 @@ name: Live Source Health Check
 on:
   schedule:
     # 每 6 小时检查一次，与 EPG 更新周期对齐
-    - cron: '7 */6 * * *'
+    - cron: '2 5 * * *'
   workflow_dispatch:
 
 permissions:
