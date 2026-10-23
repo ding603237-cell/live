@@ -3,20 +3,35 @@ on:
   push:
   schedule:
     - cron: '15 16,18,20,22,0,2,4,6,8,10,12,14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Update EPG Files
       run: |
-        rm -f e.xml && wget https://raw.githubusercontent.com/suzukua/epg/refs/heads/hidden/t.xml -O e.xml
+        set -euo pipefail
+        wget -q https://raw.githubusercontent.com/suzukua/epg/refs/heads/hidden/t.xml -O e.xml.new
+        if ! head -c 100 e.xml.new | grep -q "<?xml"; then
+          echo "::error::下载到的 EPG 内容不是合法 XML，放弃更新"
+          rm -f e.xml.new
+          exit 0
+        fi
+        mv e.xml.new e.xml
         git config --local user.name "github-actions[bot]"
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git add e.xml
-        git commit -m "EPG Update."
+        if git diff --cached --quiet -- e.xml; then
+          echo "EPG 内容无变化，跳过提交"
+        else
+          git commit -m "EPG Update."
+        fi
     - name: Push changes
-      run: git push origin main
+      run: git push origin HEAD:${{ github.event.repository.default_branch }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
