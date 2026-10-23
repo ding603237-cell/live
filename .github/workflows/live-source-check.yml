@@ -1,8 +1,9 @@
 name: Live Source Health Check
 on:
-  schedule:
-    # 每 6 小时检查一次，与 EPG 更新周期对齐
-    - cron: '2 5 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'tv/m3u/**'
   workflow_dispatch:
 
 permissions:
