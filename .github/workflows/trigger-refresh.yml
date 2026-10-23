@@ -1,0 +1,66 @@
+name: Trigger Source Refresh
+# 监听订阅/EPG 变更，触发 live-scheduler 执行下一轮直播源维护。
+# 同时承担 cron 失效时的兜底：任何一次 push 都会让整条链路重新活一次。
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tv/m3u/**'
+      - 'e.xml'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [live-source-tick]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trigger-source-refresh
+  cancel-in-progress: true
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Dispatch next refresh round
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          SCHEDULER_REPO: ding603237-cell/live-scheduler
+          SCHEDULER_WORKFLOW: scheduled-update.yml
+          MIN_INTERVAL_HOURS: '6'
+        run: |
+          set -euo pipefail
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::缺少 GH_TOKEN secret"
+            exit 1
+          fi
+
+          # 时间闸门：距上次运行不足 6 小时则不重复触发，避免自激循环
+          last=0
+          if [ -f heartbeat.json ]; then
+            last=$(python3 -c "
+          import json, datetime
+          try:
+              d = json.load(open('heartbeat.json'))
+              ts = datetime.datetime.strptime(d['last_run'], '%Y-%m-%dT%H:%M:%SZ').replace(tzinfo=datetime.timezone.utc)
+              print(int(ts.timestamp()))
+          except Exception:
+              print(0)
+          ")
+          fi
+          now=$(date -u +%s)
+          elapsed=$(( (now - last) / 3600 ))
+          echo "距上次更新 ${elapsed} 小时（阈值 6 小时）"
+          if [ "$elapsed" -lt 6 ]; then
+            echo "未到更新间隔，跳过"
+            exit 0
+          fi
+
+          code=$(curl -s -o /tmp/r.json -w "%{http_code}" -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${SCHEDULER_REPO}/actions/workflows/${SCHEDULER_WORKFLOW}/dispatches" \
+            -d '{"ref":"main"}')
+          echo "dispatch HTTP $code"
+          [ "$code" = "204" ] || { cat /tmp/r.json; exit 1; }
