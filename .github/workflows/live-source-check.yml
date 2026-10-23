@@ -1,0 +1,38 @@
+name: Live Source Health Check
+on:
+  schedule:
+    # 每 6 小时检查一次，与 EPG 更新周期对齐
+    - cron: '7 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Probe live sources and rewrite m3u
+        env:
+          BASE_URL: ${{ vars.M3U_BASE_URL || format('https://{0}.github.io/live', github.repository_owner) }}
+        run: |
+          python3 .github/scripts/probe_m3u.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- tv/m3u/live.m3u; then
+            echo "所有直播源依然可用，无需更新"
+            exit 0
+          fi
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add tv/m3u/live.m3u
+          git commit -m "chore: refresh live sources ($(date -u '+%Y-%m-%d %H:%M UTC'))"
+          git push origin HEAD:${{ github.event.repository.default_branch }}
