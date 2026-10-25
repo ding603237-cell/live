@@ -1,5 +1,7 @@
 #EXTM3U x-tvg-url="https://ding603237-cell.github.io/live/e.xml"
 #EXTINF:-1 tvg-name="CCTV-1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV1.png" group-title="央视频道",CCTV-1
+http://198.204.228.26/live/cctv1hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV1.png" group-title="央视频道",CCTV-1 备1
 http://204.12.221.218:8181/3m1080p/cctv1.m3u8
 #EXTINF:-1 tvg-name="CCTV-1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV1.png" group-title="央视频道",CCTV-1 备1
 http://38.75.136.137:98/gslb/dsdqbv/cctv1hd.m3u8?auth=test20251009
@@ -33,6 +35,10 @@ http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv13hd
 http://74.91.26.218:82/live/cctv13hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-13 备3" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV13.png" group-title="央视频道",CCTV-13 备3
 http://120.76.248.139/live/bfgd/4200000067.m3u8
+#EXTINF:-1 tvg-name="CCTV-14" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV14.png" group-title="央视频道",CCTV-14
+http://198.204.228.26/live/cctv14hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-14" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV14.png" group-title="央视频道",CCTV-14 备1
+http://204.12.221.218:8181/3m1080p/cctv14.m3u8
 #EXTINF:-1 tvg-name="CCTV-14 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV14.png" group-title="央视频道",CCTV-14 备1
 http://74.91.26.218:82/live/cctv14hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-14 备2" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV14.png" group-title="央视频道",CCTV-14 备2
@@ -40,6 +46,8 @@ http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv14hd
 #EXTINF:-1 tvg-name="CCTV-14 备2 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV14.png" group-title="央视频道",CCTV-14 备2 备1
 http://38.75.136.137:98/gslb/dsdqbv/cctv14hd.m3u8?auth=test20251009
 #EXTINF:-1 tvg-name="CCTV-15" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV15.png" group-title="央视频道",CCTV-15
+http://198.204.228.26/live/cctv15hd.m3u8
+#EXTINF:-1 tvg-name="CCTV-15" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV15.png" group-title="央视频道",CCTV-15 备1
 http://204.12.221.218:8181/3m1080p/cctv15.m3u8
 #EXTINF:-1 tvg-name="CCTV-15 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV15.png" group-title="央视频道",CCTV-15 备1
 http://74.91.26.218:82/live/cctv15hd.m3u8
@@ -97,17 +105,19 @@ http://107.150.60.122/live/cctv5hd.m3u8
 http://207.56.13.146:81/cdnlive/cctv5.m3u8
 #EXTINF:-1 tvg-name="CCTV-5 备2" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV5.png" group-title="央视频道",CCTV-5 备2
 http://38.75.136.137:98/gslb/dsdqpub/cctv5p.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="CCTV-5+" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV5+.png" group-title="央视频道",CCTV-5+
-http://223.78.65.165:9901/tsfile/live/0006_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-name="CCTV-5+" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV5+.png" group-title="央视频道",CCTV-5+ 备1
-http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009
 #EXTINF:-1 tvg-name="CCTV-5+ 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV5+.png" group-title="央视频道",CCTV-5+ 备1
+http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009
+#EXTINF:-1 tvg-name="CCTV-5+ 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV5+.png" group-title="央视频道",CCTV-5+ 备1 备1
 http://120.76.248.139/live/bfgd/4200000246.m3u8
+#EXTINF:-1 tvg-name="CCTV-6" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV6.png" group-title="央视频道",CCTV-6
+http://69.30.245.50/live/cctv6.m3u8
+#EXTINF:-1 tvg-name="CCTV-6" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV6.png" group-title="央视频道",CCTV-6 备1
+http://198.204.228.26/live/cctv6hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-6 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV6.png" group-title="央视频道",CCTV-6 备1
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv6hd
 #EXTINF:-1 tvg-name="CCTV-6 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV6.png" group-title="央视频道",CCTV-6 备1 备1
 http://198.204.240.250:82/live/cctv6.m3u8
-#EXTINF:-1 tvg-name="CCTV-6 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV6.png" group-title="央视频道",CCTV-6 备1 备1 备1
+#EXTINF:-1 tvg-name="CCTV-6 备1 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV6.png" group-title="央视频道",CCTV-6 备1 备1 备1
 http://74.91.26.218:82/live/cctv6hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-7 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV7.png" group-title="央视频道",CCTV-7 备1
 http://74.91.26.218:82/live/cctv7hd.m3u8
@@ -118,10 +128,12 @@ http://207.56.13.146:81/cdnlive/cctv7.m3u8
 #EXTINF:-1 tvg-name="CCTV-7 备3" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV7.png" group-title="央视频道",CCTV-7 备3
 http://107.150.60.122/live/cctv7hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-8" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV8.png" group-title="央视频道",CCTV-8
+http://bztv.tvbus.cc:8081/cdnlive/cctv8.m3u8
+#EXTINF:-1 tvg-name="CCTV-8" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV8.png" group-title="央视频道",CCTV-8 备1
 http://69.30.245.50/live/cctv8.m3u8
 #EXTINF:-1 tvg-name="CCTV-8 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV8.png" group-title="央视频道",CCTV-8 备1 备1
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv8k
-#EXTINF:-1 tvg-name="CCTV-8 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV8.png" group-title="央视频道",CCTV-8 备1 备1 备1
+#EXTINF:-1 tvg-name="CCTV-8 备1 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV8.png" group-title="央视频道",CCTV-8 备1 备1 备1
 http://74.91.26.218:82/live/cctv8hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-8 备2" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV8.png" group-title="央视频道",CCTV-8 备2
 http://207.56.13.146:81/cdnlive/cctv8.m3u8
@@ -129,7 +141,7 @@ http://207.56.13.146:81/cdnlive/cctv8.m3u8
 http://192.151.150.154/live/cctv9hd.m3u8
 #EXTINF:-1 tvg-name="CCTV-9 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV9.png" group-title="央视频道",CCTV-9 备1
 http://107.150.60.122/live/cctv9hd.m3u8
-#EXTINF:-1 tvg-name="CCTV-9 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV9.png" group-title="央视频道",CCTV-9 备1 备1
+#EXTINF:-1 tvg-name="CCTV-9 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV9.png" group-title="央视频道",CCTV-9 备1 备1
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=cctv9hd
 #EXTINF:-1 tvg-name="CCTV-9 备2" tvg-logo="https://ding603237-cell.github.io/live/tv/CCTV9.png" group-title="央视频道",CCTV-9 备2
 http://74.91.26.218:82/live/cctv9hd.m3u8
@@ -305,7 +317,7 @@ http://38.75.136.137:98/gslb/dsdqpub/jxwshd.m3u8?auth=testpub
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hewshd
 #EXTINF:-1 tvg-name="河北卫视 备1" tvg-logo="https://i.imgur.com/Z5Ppzbi.png" group-title="卫视频道",河北卫视 备1
 https://event.pull.hebtv.com/live/live101.m3u8
-#EXTINF:-1 tvg-name="河北卫视 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/河北卫视.png" group-title="卫视频道",河北卫视 备1 备1
+#EXTINF:-1 tvg-name="河北卫视 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/河北卫视.png" group-title="卫视频道",河北卫视 备1 备1
 http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="河北卫视 备2" tvg-logo="https://ding603237-cell.github.io/live/tv/河北卫视.png" group-title="卫视频道",河北卫视 备2
 http://120.76.248.139/live/bfgd/4200000108.m3u8
@@ -313,8 +325,6 @@ http://120.76.248.139/live/bfgd/4200000108.m3u8
 http://107.150.60.122/live/hawshd.m3u8
 #EXTINF:-1 tvg-name="河南卫视 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/河南卫视.png" group-title="卫视频道",河南卫视 备1
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hawshd
-#EXTINF:-1 tvg-name="河南卫视 备2" tvg-logo="https://ding603237-cell.github.io/live/tv/河南卫视.png" group-title="卫视频道",河南卫视 备2
-http://111.59.139.82:11888/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="河南卫视 备3" tvg-logo="https://ding603237-cell.github.io/live/tv/河南卫视.png" group-title="卫视频道",河南卫视 备3
 http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="浙江卫视" tvg-logo="https://ding603237-cell.github.io/live/tv/浙江卫视.png" group-title="卫视频道",浙江卫视
@@ -413,7 +423,7 @@ http://120.76.248.139/live/bfgd/4200000111.m3u8
 http://107.150.60.122/live/hljwshd.m3u8
 #EXTINF:-1 tvg-name="黑龙江卫视 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/黑龙江卫视.png" group-title="卫视频道",黑龙江卫视 备1
 http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub
-#EXTINF:-1 tvg-name="黑龙江卫视 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/黑龙江卫视.png" group-title="卫视频道",黑龙江卫视 备1 备1
+#EXTINF:-1 tvg-name="黑龙江卫视 备1 备1" tvg-logo="https://ding603237-cell.github.io/live/tv/黑龙江卫视.png" group-title="卫视频道",黑龙江卫视 备1 备1
 http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hljwshd
 #EXTINF:-1 tvg-name="黑龙江卫视 备2" tvg-logo="https://ding603237-cell.github.io/live/tv/黑龙江卫视.png" group-title="卫视频道",黑龙江卫视 备2
 http://120.76.248.139/live/bfgd/4200000095.m3u8
@@ -625,8 +635,6 @@ http://l.cztvcloud.com/channels/lantian/SXyuyao3/720p.m3u8?zzhed
 http://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
 #EXTINF:-1 tvg-name="余姚新闻综合 备1" group-title="浙江频道",余姚新闻综合 备1
 http://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8?cWlkPSZzPTg3OWMwYmMyZDMzYTFhZGY3NDQxMjgyYTg1MmUzNTY0JmVzPTE3MDY2Nzc4NzMmdXVpZD0yMjdiY2MzNGNiNGY0MThlYjRiY2IxYzcwNmZjODNkMS02NzQ3NDY2NyZ2PTImYXM9MCZjZG5leF9pZD10eF9waG9uZV9saXZl
-#EXTINF:-1 tvg-name="余姚综合" group-title="浙江频道",余姚综合
-https://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8
 #EXTINF:-1 tvg-name="余姚综合 备1" group-title="浙江频道",余姚综合 备1
 http://l.cztvcloud.com/channels/lantian/SXyuyao1/720p.m3u8?zzhed
 #EXTINF:-1 tvg-name="余姚综合 备2" group-title="浙江频道",余姚综合 备2
